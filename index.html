@@ -777,8 +777,20 @@
   /* ── AdFit ── */
   .adfit-wrap {
     display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+    margin: 28px 0 8px;
+    min-height: 76px;
+  }
+
+  .adfit-label {
+    font-size: 10px;
+    font-family: var(--mono);
+    color: var(--muted);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    align-self: center;
   }
 
   /* ── Guide & FAQ sections ── */
@@ -961,14 +973,6 @@
       🛡 강도 체크
     </button>
   </nav>
-
-  <!-- AdFit -->
-  <div class="adfit-wrap">
-    <ins class="kakao_ad_area" style="display:none;"
-      data-ad-unit="DAN-JZf38poXacQnXo5k"
-      data-ad-width="320"
-      data-ad-height="50"></ins>
-  </div>
 
   <!-- ════ PAGE: 생성기 ════ -->
   <div class="page active" id="page-gen">
@@ -1190,6 +1194,15 @@
     </div>
 
   </div><!-- /page-check -->
+
+  <!-- AdFit -->
+  <div class="adfit-wrap">
+    <span class="adfit-label">Sponsored</span>
+    <ins class="kakao_ad_area" style="display:none;"
+      data-ad-unit="DAN-JZf38poXacQnXo5k"
+      data-ad-width="320"
+      data-ad-height="50"></ins>
+  </div>
 
   <!-- ════ 비밀번호 보안 가이드 ════ -->
   <section class="content-section" aria-label="비밀번호 보안 가이드">
