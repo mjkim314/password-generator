@@ -781,6 +781,118 @@
     margin-bottom: 20px;
   }
 
+  /* ── Guide & FAQ sections ── */
+  .content-section {
+    margin-bottom: 20px;
+    animation: fadeUp 0.6s 0.1s ease both;
+  }
+
+  .section-heading {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 12px;
+    padding-left: 4px;
+  }
+
+  .guide-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .guide-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+    transition: border-color 0.2s;
+  }
+
+  .guide-card:hover { border-color: var(--muted); }
+
+  .guide-card-icon {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .guide-card h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+
+  .guide-card p {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+
+  .guide-card strong { color: var(--text); font-weight: 500; }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .faq-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .faq-q {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    text-align: left;
+    gap: 12px;
+  }
+
+  .faq-q-text {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text);
+    font-family: var(--sans);
+  }
+
+  .faq-arrow {
+    font-size: 11px;
+    color: var(--muted);
+    font-family: var(--mono);
+    flex-shrink: 0;
+    transition: transform 0.25s;
+  }
+
+  .faq-item.open .faq-arrow { transform: rotate(180deg); }
+
+  .faq-a {
+    display: none;
+    padding: 0 20px 16px;
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.7;
+    border-top: 1px solid var(--border);
+    padding-top: 14px;
+  }
+
+  .faq-item.open .faq-a { display: block; }
+
+  .faq-a strong { color: var(--text); font-weight: 500; }
+
+  @media (max-width: 500px) {
+    .guide-grid { grid-template-columns: 1fr; }
+  }
+
   /* ── Footer ── */
   .site-footer {
     margin-top: 40px;
@@ -1078,6 +1190,78 @@
     </div>
 
   </div><!-- /page-check -->
+
+  <!-- ════ 비밀번호 보안 가이드 ════ -->
+  <section class="content-section" aria-label="비밀번호 보안 가이드">
+    <h2 class="section-heading">비밀번호 보안 가이드</h2>
+    <div class="guide-grid">
+
+      <div class="guide-card">
+        <div class="guide-card-icon">📏</div>
+        <h3>안전한 비밀번호란?</h3>
+        <p>비밀번호의 강도는 <strong>길이</strong>가 가장 큰 영향을 미칩니다. 16자 이상이면 동일한 문자 조합이라도 해독에 수억 배 더 오랜 시간이 걸립니다. 복잡도보다 길이를 먼저 늘리세요. 엔트로피(bits)는 비밀번호가 가진 정보량을 나타내며, 값이 클수록 무작위 대입 공격에 강합니다.</p>
+      </div>
+
+      <div class="guide-card">
+        <div class="guide-card-icon">⚠️</div>
+        <h3>흔히 쓰는 취약한 비밀번호</h3>
+        <p><strong>사전 공격</strong>은 흔히 쓰이는 단어와 패턴을 자동으로 시도하는 방식입니다. <strong>브루트포스</strong>는 모든 경우의 수를 순서대로 대입합니다. <code>password</code>, <code>123456</code>, 생년월일, 이름+숫자 조합은 공격자가 가장 먼저 시도하는 목록에 포함됩니다.</p>
+      </div>
+
+      <div class="guide-card">
+        <div class="guide-card-icon">🗂️</div>
+        <h3>비밀번호 관리자 활용</h3>
+        <p>모든 서비스에 다른 비밀번호를 쓰는 가장 현실적인 방법은 <strong>비밀번호 관리자</strong>입니다. <strong>Bitwarden</strong>(오픈소스·무료), <strong>1Password</strong>, <strong>KeePass</strong> 등을 사용하면 수십 개의 강력한 비밀번호를 마스터 비밀번호 하나로 관리할 수 있습니다.</p>
+      </div>
+
+      <div class="guide-card">
+        <div class="guide-card-icon">🔐</div>
+        <h3>2단계 인증(2FA)의 중요성</h3>
+        <p>비밀번호가 유출되더라도 <strong>2단계 인증(2FA)</strong>이 설정되어 있으면 계정을 보호할 수 있습니다. Google Authenticator, Authy 등의 앱을 사용한 <strong>TOTP 방식</strong>이 SMS보다 안전합니다. 주요 서비스에는 반드시 2FA를 활성화하세요.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════ FAQ ════ -->
+  <section class="content-section" aria-label="자주 묻는 질문">
+    <h2 class="section-heading">자주 묻는 질문</h2>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-q-text">이 사이트는 제 비밀번호를 저장하나요?</span>
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">아니요. 생성하거나 입력한 비밀번호는 <strong>서버로 전송되지 않으며</strong> 저장되지 않습니다. 모든 처리는 사용자의 브라우저 안에서만 이루어집니다. 페이지를 닫으면 기록도 사라집니다.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-q-text">어떤 비밀번호 길이를 권장하나요?</span>
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">최소 <strong>12자 이상</strong>, 가능하면 <strong>16자 이상</strong>을 권장합니다. 비밀번호 관리자를 사용한다면 20자 이상의 완전 무작위 비밀번호를 사용하는 것이 이상적입니다. 길이가 1자 늘어날 때마다 해독 난이도는 문자 종류 수만큼 곱으로 증가합니다.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-q-text">특수문자를 꼭 써야 하나요?</span>
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">특수문자는 문자풀 크기를 늘려 엔트로피를 높입니다. 그러나 <strong>길이가 더 중요</strong>합니다. 특수문자 없는 20자 비밀번호가 특수문자 포함 8자 비밀번호보다 훨씬 강합니다. 서비스에서 특수문자를 허용한다면 추가하는 것이 좋지만, 쓸 수 없는 환경이라면 길이로 보완하세요.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-q-text">비밀번호를 얼마나 자주 바꿔야 하나요?</span>
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">최근 보안 전문가들은 <strong>주기적 변경보다 강력한 비밀번호 유지</strong>를 더 중요시합니다. 단, 사용 중인 서비스에서 데이터 유출이 발생했거나, 같은 비밀번호를 여러 곳에서 사용하고 있다면 즉시 변경하세요. Have I Been Pwned(haveibeenpwned.com)에서 유출 여부를 확인할 수 있습니다.</div>
+      </div>
+
+    </div>
+  </section>
 
   <footer class="site-footer">
     <span class="footer-copy">© 2025 SecureKey</span>
@@ -1401,6 +1585,14 @@ function toggleVisibility() {
   const btn = document.getElementById('visBtn');
   if (inp.type === 'password') { inp.type = 'text';     btn.textContent = '🙈'; }
   else                         { inp.type = 'password'; btn.textContent = '👁'; }
+}
+
+/* FAQ 토글 */
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  item.classList.toggle('open', !isOpen);
+  btn.setAttribute('aria-expanded', !isOpen);
 }
 
 /* Init — 초기에는 자동 생성 없음 */
