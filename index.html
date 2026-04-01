@@ -764,12 +764,56 @@
     50%       { opacity: 0.3; }
   }
 
+  /* ── Site desc ── */
+  .site-desc {
+    font-size: 13px;
+    color: var(--muted);
+    font-family: var(--sans);
+    padding-left: 42px;
+    margin-top: 6px;
+    line-height: 1.6;
+  }
+
+  /* ── Footer ── */
+  .site-footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .footer-copy {
+    font-size: 12px;
+    color: var(--muted);
+    font-family: var(--mono);
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 20px;
+  }
+
+  .footer-links a {
+    font-size: 12px;
+    color: var(--muted);
+    font-family: var(--mono);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--accent); }
+
   @media (max-width: 500px) {
     .toggles-grid { grid-template-columns: 1fr; }
     .slider-row   { flex-wrap: wrap; }
     .entropy-grid { grid-template-columns: 1fr 1fr; }
     .big-strength { flex-direction: column; text-align: center; }
     .tab-btn      { font-size: 13px; padding: 9px 10px; }
+    .site-footer  { flex-direction: column; align-items: flex-start; }
   }
 </style>
 </head>
@@ -784,6 +828,7 @@
       <div class="logo-text">Secure<span>Key</span></div>
     </div>
     <div class="tagline">// 브라우저에서만 처리 · 서버 전송 없음</div>
+    <p class="site-desc">암호학적 난수를 사용해 강력한 비밀번호를 생성하고, 기존 비밀번호의 강도를 분석합니다. 입력한 정보는 서버로 전송되지 않으며 모든 처리는 브라우저 내에서만 이루어집니다.</p>
   </header>
 
   <!-- Tab Nav -->
@@ -1018,6 +1063,14 @@
     </div>
 
   </div><!-- /page-check -->
+
+  <footer class="site-footer">
+    <span class="footer-copy">© 2025 SecureKey</span>
+    <nav class="footer-links">
+      <a href="about.html">소개</a>
+      <a href="privacy.html">개인정보처리방침</a>
+    </nav>
+  </footer>
 
 </div>
 

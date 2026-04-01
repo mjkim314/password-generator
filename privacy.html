@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-adsense-account" content="ca-pub-7251253669890286">
+<meta name="description" content="SecureKey 개인정보처리방침 — 수집하는 데이터 없음, 브라우저 내 처리, Google AdSense 쿠키 안내.">
+<title>개인정보처리방침 — SecureKey</title>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7251253669890286" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --surface: #12121a;
+    --surface2: #1a1a26;
+    --border: #2a2a3d;
+    --accent: #00ff88;
+    --accent2: #7b61ff;
+    --accent3: #ff6b6b;
+    --text: #e8e8f0;
+    --muted: #6b6b8a;
+    --mono: 'Space Mono', monospace;
+    --sans: 'DM Sans', sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px 80px;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(0,255,136,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,255,136,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(123,97,255,0.08) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 680px;
+    position: relative;
+    z-index: 1;
+  }
+
+  header { margin-bottom: 32px; animation: fadeDown 0.6s ease both; }
+
+  .logo { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+
+  .logo-icon {
+    width: 32px; height: 32px;
+    background: var(--accent);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+    text-decoration: none;
+  }
+
+  .logo-text {
+    font-family: var(--mono);
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    text-decoration: none;
+    color: var(--text);
+  }
+
+  .logo-text span { color: var(--accent); }
+
+  .tagline {
+    font-size: 13px;
+    color: var(--muted);
+    font-family: var(--mono);
+    letter-spacing: 0.5px;
+    padding-left: 42px;
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    animation: fadeUp 0.6s 0.1s ease both;
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent2), var(--accent3));
+  }
+
+  .card-title {
+    font-size: 11px;
+    font-family: var(--mono);
+    color: var(--muted);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .updated {
+    font-size: 12px;
+    color: var(--muted);
+    font-family: var(--mono);
+    margin-bottom: 24px;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 10px;
+    margin-top: 28px;
+    padding-top: 28px;
+    border-top: 1px solid var(--border);
+  }
+
+  h2:first-of-type { margin-top: 0; padding-top: 0; border-top: none; }
+
+  p {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.75;
+    margin-bottom: 10px;
+  }
+
+  .highlight { color: var(--text); }
+
+  .info-box {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 12px 0;
+  }
+
+  .info-box p { margin-bottom: 0; font-size: 14px; }
+
+  .info-box.green { border-color: rgba(0,255,136,0.3); background: rgba(0,255,136,0.04); }
+  .info-box.green p { color: var(--text); }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .site-footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .footer-copy { font-size: 12px; color: var(--muted); font-family: var(--mono); }
+
+  .footer-links { display: flex; gap: 20px; }
+
+  .footer-links a {
+    font-size: 12px;
+    color: var(--muted);
+    font-family: var(--mono);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--accent); }
+
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 500px) {
+    .site-footer { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <div class="logo">
+      <a href="index.html" class="logo-icon">🔐</a>
+      <a href="index.html" class="logo-text">Secure<span>Key</span></a>
+    </div>
+    <div class="tagline">// 브라우저에서만 처리 · 서버 전송 없음</div>
+  </header>
+
+  <div class="card">
+    <div class="card-title">// 개인정보처리방침</div>
+    <p class="updated">최종 업데이트: 2025년 4월 1일</p>
+
+    <h2>수집하는 개인정보</h2>
+    <div class="info-box green">
+      <p class="highlight">SecureKey는 사용자의 어떠한 개인정보도 수집하거나 저장하지 않습니다.</p>
+    </div>
+    <p>비밀번호 생성 및 강도 분석을 포함한 모든 처리는 사용자의 브라우저 내에서만 이루어지며, 입력된 비밀번호나 생성된 결과는 서버로 전송되지 않습니다.</p>
+
+    <h2>제3자 광고 서비스 (Google AdSense)</h2>
+    <p>본 사이트는 <strong>Google AdSense</strong>를 통해 광고를 게재합니다. Google을 포함한 제3자 광고 제공업체는 사용자의 방문 정보를 기반으로 관련 광고를 표시하기 위해 쿠키를 사용할 수 있습니다.</p>
+    <div class="info-box">
+      <p>Google의 광고 쿠키 사용에 대한 자세한 내용은 <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google 광고 정책</a>을 참고하세요.</p>
+    </div>
+    <p>광고 개인화를 원하지 않는 경우 <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Google 광고 설정</a>에서 조정할 수 있습니다.</p>
+
+    <h2>쿠키</h2>
+    <p>SecureKey 자체는 쿠키를 사용하지 않습니다. 다만 Google AdSense 등 제3자 서비스가 광고 제공 목적으로 쿠키를 설정할 수 있습니다. 브라우저 설정을 통해 쿠키를 관리하거나 거부할 수 있습니다.</p>
+
+    <h2>외부 서비스</h2>
+    <p>본 사이트는 폰트 로드를 위해 Google Fonts를 사용합니다. Google Fonts는 사용자의 IP 주소 등을 수집할 수 있으며, 이에 대해서는 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a>이 적용됩니다.</p>
+
+    <h2>방침 변경</h2>
+    <p>본 개인정보처리방침은 사전 고지 없이 변경될 수 있습니다. 변경 시 페이지 상단의 최종 업데이트 날짜가 갱신됩니다.</p>
+
+    <h2>문의</h2>
+    <p>개인정보처리방침에 관한 문의사항은 GitHub 저장소(<a href="https://github.com/mjkim314/password-generator" target="_blank" rel="noopener">github.com/mjkim314/password-generator</a>)의 Issues를 통해 연락해 주세요.</p>
+  </div>
+
+  <footer class="site-footer">
+    <span class="footer-copy">© 2025 SecureKey</span>
+    <nav class="footer-links">
+      <a href="index.html">홈</a>
+      <a href="about.html">소개</a>
+    </nav>
+  </footer>
+
+</div>
+</body>
+</html>
